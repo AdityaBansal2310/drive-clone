@@ -211,11 +211,13 @@ a.controller("data", function ($scope, $http, $location) {
 
   $scope.register = function () {
 
+    
     var email = $scope.email;
     var fname = $scope.fname;
 
     var lname = $scope.lname;
 
+    
     var pass = $scope.password;
 
 
@@ -269,8 +271,10 @@ a.controller("data", function ($scope, $http, $location) {
 })
 a.controller("dashboard", function ($scope, $http, $location) {
   $scope.dash = function () {
+  
     $http({
       method: "GET",
+   
       url: window.baseUrl + "/user/dashboard/",
       withCredentials: true,
     })
